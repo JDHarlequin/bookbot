@@ -9,6 +9,12 @@ def word_counter():
     return word_count
 
 def char_counter():
+    ccount = {}
     book = get_book_text("books/frankenstein.txt")
     book = book.lower()
-    print(book)
+    for letter in range(0, len(book)):
+        if book[letter] not in ccount:
+            ccount[book[letter]] = 1
+        else:
+            ccount[book[letter]] += 1
+    print(ccount)
