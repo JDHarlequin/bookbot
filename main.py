@@ -1,9 +1,6 @@
-def get_book_text(path):
-    with open(path) as f:
-        file_contents = f.read()
-    return file_contents
+from stats import char_counter
 
 def main():
-    print(get_book_text("books/frankenstein.txt"))
+    char_counter()
 
 main()
